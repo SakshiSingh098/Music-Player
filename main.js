@@ -1,4 +1,4 @@
-const music = new Audio('audio/5.mp3');
+const music = new Audio('Audio/5.mp3');
 // music.play();
 
 const songs=[
@@ -220,12 +220,12 @@ let title =document.getElementById('title');
 Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
     element.addEventListener('click',(el)=>{
         index=el.target.id;
-        music.src=`audio/${index}.mp3`;
+        music.src=`Audio/${index}.mp3`;
         music.play();
         poster_master_play.src=`img/${index}.jpg`;
         masterPlay.classList.remove('bi-play-fill');
         masterPlay.classList.add('bi-pause-fill');
-        download_music.href=`audio/${index}.mp3`;
+        download_music.href=`Audio/${index}.mp3`;
 
         let songTitles=songs.filter((els)=>{
              return els.id==index;
@@ -319,7 +319,7 @@ back.addEventListener('click',()=>{
     if(index<1){
         index=Array.from(document.getElementsByClassName('songItems')).length;
     }
-    music.src=`audio/${index}.mp3`;
+    music.src=`Audio/${index}.mp3`;
     music.play();
     poster_master_play.src=`img/${index}.jpg`;
     masterPlay.classList.remove('bi-play-fill');
@@ -347,7 +347,7 @@ next.addEventListener('click',()=>{
     if(index>Array.from(document.getElementsByClassName('songItems')).length){
         index=1;
     }
-    music.src=`audio/${index}.mp3`;
+    music.src=`Audio/${index}.mp3`;
     music.play();
     poster_master_play.src=`img/${index}.jpg`;
     masterPlay.classList.remove('bi-play-fill');
@@ -430,12 +430,12 @@ shuffle.addEventListener('click',()=>{
         {
             index++; 
         }
-            music.src=`audio/${index}.mp3`;
+            music.src=`Audio/${index}.mp3`;
             music.play();
             poster_master_play.src=`img/${index}.jpg`;
             masterPlay.classList.remove('bi-play-fill');
             masterPlay.classList.add('bi-pause-fill');
-            download_music.href=`audio/${index}.mp3`;
+            download_music.href=`Audio/${index}.mp3`;
     
             let songTitles=songs.filter((els)=>{
                  return els.id==index;
@@ -457,12 +457,12 @@ shuffle.addEventListener('click',()=>{
 
     const repeat_music=()=>{
            index;
-            music.src=`audio/${index}.mp3`;
+            music.src=`Audio/${index}.mp3`;
             music.play();
             poster_master_play.src=`img/${index}.jpg`;
             masterPlay.classList.remove('bi-play-fill');
             masterPlay.classList.add('bi-pause-fill');
-            download_music.href=`audio/${index}.mp3`;
+            download_music.href=`Audio/${index}.mp3`;
     
             let songTitles=songs.filter((els)=>{
                  return els.id==index;
@@ -488,12 +488,12 @@ shuffle.addEventListener('click',()=>{
        } else {
             index=Math.floor((Math.random()*songs.length)+1)
        }
-         music.src=`audio/${index}.mp3`;
+         music.src=`Audio/${index}.mp3`;
          music.play();
          poster_master_play.src=`img/${index}.jpg`;
          masterPlay.classList.remove('bi-play-fill');
          masterPlay.classList.add('bi-pause-fill');
-         download_music.href=`audio/${index}.mp3`;
+         download_music.href=`Audio/${index}.mp3`;
  
          let songTitles=songs.filter((els)=>{
               return els.id==index;
